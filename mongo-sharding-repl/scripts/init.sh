@@ -55,12 +55,9 @@ use somedb
 for (let index = 0; index < 2000; index++) {
   db.helloDoc.insertOne({
     name : "Keka peka " + index,
-    birthday: Math.round(Math.random() * 100)
+    age: Math.round(Math.random() * 100)
   })
 }
 EOF
-
-# echo "Запуск Redis..."
-# docker compose exec -T redis_1 redis-cli --cluster create redis_1:6379 --cluster-replicas 2
 
 echo "Готово"
